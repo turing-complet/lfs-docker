@@ -14,5 +14,5 @@ foreach ($pkg in $packages)
     $urlPath = [io.path]::GetDirectoryName($pkg.href)
     $varName = $fName -split '\d' | select -First 1 | TrimHyphen
     Write-Output "$varName=`"$fName`""
-    Write-Output "wget $urlPath/`${$fName}`n"
+    Write-Output "wget $urlPath/`${$varName}`n"
 }
